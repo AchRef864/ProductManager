@@ -1,0 +1,29 @@
+<!-- get-categories.component.html -->
+<div class="container">
+    <h2>Category List</h2>
+
+    <table id="categoryTable">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Lib</th>
+                <th>Prix</th>
+                <th>Quantité</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{ product.code }}</td>
+                <td>{{ product.lib }}</td>
+                <td>{{ product.prix }}</td>
+                <td>{{ product.quantite }}</td>
+                <td>{{ product.category.lib }}</td>
+                <td>
+                    <button (click)="buyProduct(product)">Buy</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

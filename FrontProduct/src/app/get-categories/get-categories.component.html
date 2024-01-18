@@ -1,0 +1,33 @@
+<!-- get-categories.component.html -->
+<div class="container">
+    <h2>Category List</h2>
+
+    <table id="categoryTable">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Lib</th>
+                <th>Actions</th>
+                <th>Check Products</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let category of categories">
+                <td>{{ category.code }}</td>
+                <td>{{ category.lib }}</td>
+                <td>
+                    <button routerLink="/categories/{{category.code}}">Edit</button>
+                    <button (click)="deleteCategory(category.code)">Delete</button>
+                </td>
+                <td>
+                    <button routerLink="/products/category/{{category.code}}">Products</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Create Category button -->
+    <div class="create-category-container">
+        <button class="create-category-button" (click)="openCreateCategoryDialog()">Create Category</button>
+    </div>
+</div>

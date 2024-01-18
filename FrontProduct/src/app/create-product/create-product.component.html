@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="form-container">
+        <h2 class="form-title">
+            Create New Category
+        </h2>
+        <form [formGroup]="createProductForm">
+            <div class="form-group">
+                <label for="code">Code</label>
+                <input type="text" id="code" name="code" required formControlName="code">
+            </div>
+            <div class="form-group">
+                <label for="lib">Lib</label>
+                <input type="text" id="lib" name="lib" required formControlName="lib">
+            </div>
+            <div class="form-group">
+                <label for="prix">Prix</label>
+                <input type="text" id="prix" name="prix" required formControlName="prix">
+            </div>
+            <div class="form-group">
+                <label for="quantite">Quantité</label>
+                <input type="text" id="quantite" name="quantite" required formControlName="quantite">
+            </div>
+            <div class="form-group">
+                <label for="codeCat">Code Catgory</label>
+                <input type="text" id="codeCat" name="codeCat" required formControlName="codeCat" [attr.disabled]="true"
+                    [(ngModel)]="this.code">
+            </div>
+            <button type="submit" (click)="createProduct()">Create</button>
+        </form>
+    </div>
+</div>

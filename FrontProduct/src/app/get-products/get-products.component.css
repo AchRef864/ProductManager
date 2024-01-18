@@ -1,0 +1,56 @@
+/* categories.css */
+
+.container {
+    font-family: Arial, sans-serif;
+}
+
+#categoryTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    /* Increased padding for better readability */
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* CSS for the Create Category Button */
+.create-category-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.create-category-button {
+    width: 100%;
+    max-width: 300px;
+    /* Adjusted max-width for better proportion */
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+    /* Adjusted font size for better proportion */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.create-category-button:hover {
+    background-color: #0056b3;
+}

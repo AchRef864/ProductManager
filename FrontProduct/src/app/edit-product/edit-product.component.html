@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="form-container">
+        <h2 class="form-title">
+            Edit Product : {{product.code}}
+        </h2>
+        <form [formGroup]="editcreateProductForm">
+            <div class="form-group">
+                <label for="code">code</label>
+                <input type="text" id="code" name="code" [attr.disabled]="true" required formControlName="code"
+                    [(ngModel)]="product.code">
+            </div>
+            <div class="form-group">
+                <label for="lib">Lib</label>
+                <input type="text" id="lib" name="lib" required formControlName="lib" [(ngModel)]="product.lib">
+            </div>
+            <div class="form-group">
+                <label for="prix">Prix</label>
+                <input type="text" id="prix" name="prix" required formControlName="prix" [(ngModel)]="product.prix">
+            </div>
+            <div class="form-group">
+                <label for="quantite">Quantité</label>
+                <input type="text" id="quantite" name="quantite" required formControlName="quantite"
+                    [(ngModel)]="product.quantite">
+            </div>
+            <div class="form-group">
+                <label for="codeCat">Code Catgory</label>
+                <input type="text" id="codeCat" name="codeCat" required formControlName="codeCat" [attr.disabled]="true"
+                    [(ngModel)]="product.category.code">
+            </div>
+            <button type="submit" (click)="editProduct()">Edit</button>
+        </form>
+    </div>
+</div>
